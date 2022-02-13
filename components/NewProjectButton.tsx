@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Button from "./Button";
 
 export default function NewProjectButton() {
+  const handleCreateNewProject = () => console.log("Create new project");
+
   return (
-    <button className="flex items-center justify-between p-4 transition-all border rounded border-dark-lighter bg-dark hover:bg-dark-lighter">
+    <Button onClick={handleCreateNewProject} className="my-6">
       <div className="flex items-center justify-center p-3 border rounded-md border-dark-lighter">
         <Image src="/images/layer.svg" alt="lightning" height={20} width={20} />
       </div>
@@ -15,6 +18,6 @@ export default function NewProjectButton() {
         </span>
       </div>
       <Image src="/images/Group 24191.svg" alt="plus" height={10} width={10} />
-    </button>
+    </Button>
   );
 }
