@@ -250,7 +250,7 @@ const Home: NextPage = () => {
                 />
               </span>
               <input
-                className="block px-3 py-2 text-xs border rounded w-60 border-dark-lighter bg-dark-darker text-medium focus:outline-none focus:border-dark-lighter focus:ring-dark-lighter focus:ring-1 text-"
+                className="block px-3 py-2 text-xs border rounded text-spacegrey-darker w-60 border-dark-lighter bg-dark-darker text-medium focus:outline-none focus:border-dark-lighter focus:ring-dark-lighter focus:ring-1 text-"
                 placeholder="Find project"
                 type="text"
                 name="search"
