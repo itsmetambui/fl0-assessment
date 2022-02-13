@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-4 py-3">
+    <header className="flex items-center justify-between px-4 py-3 border-y border-dark-lighter">
       <div className="flex items-center justify-between gap-4">
         <Image
           src="/images/Button.Logo.Back.svg"
