@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
+import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
-    <h1 className="font-sans text-3xl font-semibold ">Recommended Recipes</h1>
+    <div className="bg-dark">
+      <Header />
+    </div>
   );
 };
 
