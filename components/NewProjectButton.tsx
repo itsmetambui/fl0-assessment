@@ -5,9 +5,9 @@ export default function NewProjectButton() {
   const handleCreateNewProject = () => console.log("Create new project");
 
   return (
-    <Button onClick={handleCreateNewProject} className="my-6">
+    <Button onClick={handleCreateNewProject}>
       <div className="flex items-center justify-center p-3 border rounded-md border-dark-lighter">
-        <Image src="/images/layer.svg" alt="lightning" height={20} width={20} />
+        <Image src="/images/layer.svg" alt="layer" height={20} width={20} />
       </div>
       <div className="flex flex-col items-start justify-between ml-4 mr-10">
         <span className="text-sm font-semibold text-spacegrey-lighter">

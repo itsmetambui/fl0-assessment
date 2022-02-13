@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./Button";
+import cn from "classnames";
 
-type RecipeCardProps = {
+type RecipeCardProps = React.HTMLProps<HTMLDivElement> & {
   background: { color?: string; image: string };
   name: string;
 };
@@ -9,11 +9,12 @@ type RecipeCardProps = {
 export default function RecipeCard({
   background: { color = "#000000", image },
   name,
+  ...divProps
 }: RecipeCardProps) {
   return (
-    <div className="cursor-pointer">
+    <div {...divProps} className={cn("cursor-pointer", divProps.className)}>
       <div
-        className="relative h-32 mb-4 overflow-hidden rounded w-60 group"
+        className="relative w-full h-32 mb-4 overflow-hidden rounded group"
         style={{
           backgroundColor: color,
         }}
