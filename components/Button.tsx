@@ -1,18 +1,15 @@
 import cn from "classnames";
 
-export default function Button({
-  children,
-  ...rest
-}: React.HTMLProps<HTMLButtonElement>) {
+export default function Button(props: React.ComponentProps<"button">) {
   return (
     <button
-      {...rest}
+      {...props}
       className={cn(
         "inline-flex items-center justify-between p-4 transition-all border rounded border-dark-lighter bg-dark hover:bg-dark-lighter",
-        rest.className
+        props.className
       )}
     >
-      {children}
+      {props.children}
     </button>
   );
 }
