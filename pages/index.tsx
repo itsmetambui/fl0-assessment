@@ -5,6 +5,7 @@ import Button from "../components/Button";
 
 import Header from "../components/Header";
 import NewProjectButton from "../components/NewProjectButton";
+import ProjectCard from "../components/ProjectCard";
 import RecipeCard from "../components/RecipeCard";
 
 const Home: NextPage = () => {
@@ -38,6 +39,128 @@ const Home: NextPage = () => {
         image: "/images/Mask Group -2.png",
       },
       name: "Expo Starter tabs with Auth",
+    },
+  ];
+
+  const projects = [
+    {
+      id: uuidv4(),
+      icon: "👾",
+      name: "Onboarding Wizzard",
+      versions: [
+        {
+          number: 3.7,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 3.6,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      icon: "⚾",
+      name: "Sale Properties",
+      versions: [
+        {
+          number: 4.1,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 4.0,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      icon: "🏓",
+      name: "Rental Properties",
+      versions: [
+        {
+          number: 2.1,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 2.0,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      icon: "👑",
+      name: "Onboarding Wizzard",
+      versions: [
+        {
+          number: 2.7,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 2.5,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      icon: "🏏",
+      name: "Sale Properties",
+      versions: [
+        {
+          number: 5.7,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 5.5,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      icon: "🚀",
+      name: "Map Filters",
+      versions: [
+        {
+          number: 1.7,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 1.0,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      icon: "🔫",
+      name: "Onboarding Wizzard",
+      versions: [
+        {
+          number: 1.9,
+          env: "uta",
+          timestamp: new Date(),
+        },
+        {
+          number: 1.0,
+          env: "prod",
+          timestamp: new Date(),
+        },
+      ],
     },
   ];
 
@@ -94,6 +217,55 @@ const Home: NextPage = () => {
                 background={background}
                 name={name}
                 className="flex-1"
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="py-6">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-start gap-2">
+              <div className="pt-1">
+                <Image
+                  src="/images/vuesax-linear-calendar.svg"
+                  height={16}
+                  width={16}
+                  alt="lightning"
+                />
+              </div>
+              <div>
+                <p className="text-base font-semibold text-spacegrey-lighter">
+                  Recent Projects
+                </p>
+              </div>
+            </div>
+            <label className="relative block">
+              <span className="sr-only">Search</span>
+              <span className="absolute inset-y-0 right-0 flex items-center pr-3">
+                <Image
+                  src="/images/Icon_search.svg"
+                  height={16}
+                  width={16}
+                  alt="lightnign"
+                />
+              </span>
+              <input
+                className="block px-3 py-2 text-xs border rounded w-60 border-dark-lighter bg-dark-darker text-medium focus:outline-none focus:border-dark-lighter focus:ring-dark-lighter focus:ring-1 text-"
+                placeholder="Find project"
+                type="text"
+                name="search"
+              />
+            </label>
+          </div>
+
+          <div>
+            {projects.map(({ id, icon, name, versions }) => (
+              <ProjectCard
+                key={id}
+                id={id}
+                icon={icon}
+                name={name}
+                versions={versions}
               />
             ))}
           </div>
