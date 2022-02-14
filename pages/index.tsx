@@ -165,7 +165,7 @@ const Home: NextPage = () => {
   ];
 
   return (
-    <div className="mx-auto bg-dark-darker">
+    <div className="min-h-screen mx-auto bg-dark-darker">
       <Header />
       <main className="max-w-5xl mx-auto ">
         <section className="py-6">
